@@ -1,8 +1,8 @@
 let btn1 = document.getElementById('myButton')
 let btn2 = document.getElementById('myButton2')
 let copyDiv = document.querySelector(".copyCode")
-let rgb1 ="#000"
-let rgb2 ="#444"
+let rgb1 ="rgb(92, 145, 229)"
+let rgb2 ="rgb(152, 63, 198)"
 
 const HexValues = () => {
     let myHexValues = "0123456789abcdef"; 
@@ -34,3 +34,7 @@ const handleButton2 = () => {
 
 btn1.addEventListener("click", handleButton1)
 btn2.addEventListener("click", handleButton2)
+
+copyDiv.addEventListener("click" , () => {
+    navigator.clipboard.writeText(copyDiv.innerText)
+})
