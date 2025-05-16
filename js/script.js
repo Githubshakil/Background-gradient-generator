@@ -1,6 +1,8 @@
 let btn1 = document.getElementById('myButton')
 let btn2 = document.getElementById('myButton2')
 let copyDiv = document.querySelector(".copyCode")
+let rgb1 ="#000"
+let rgb2 ="#444"
 
 const HexValues = () => {
     let myHexValues = "0123456789abcdef"; 
@@ -13,18 +15,19 @@ const HexValues = () => {
 
 
 const handleButton1= () => {
-   let rgb1= HexValues()
-   console.log(rgb1);
-   document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, #444)`
-   copyDiv.innerHTML = `background-image: linear-gradient(to right, ${rgb1}, rgb(152, 63, 198))`
+   rgb1= HexValues()
+   btn1.innerText = rgb1
+   btn1.style.background = rgb1
+   document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`
+   copyDiv.innerHTML = `background-image: linear-gradient(to right, ${rgb1}, ${rgb2})`
 }
 
 const handleButton2 = () => {
-   let rgb2= HexValues()
-   console.log(rgb2);
-   document.body.style.backgroundImage = `linear-gradient(to right, #000, ${rgb2})`
-   copyDiv.innerHTML = `background-image: linear-gradient(to right, #000, ${rgb2})`
-
+   rgb2 = HexValues()
+   btn2.innerText = rgb2
+   btn2.style.background = rgb2
+   document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`
+   copyDiv.innerHTML = `background-image: linear-gradient(to right, ${rgb1}, ${rgb2})`
 }
    
         
